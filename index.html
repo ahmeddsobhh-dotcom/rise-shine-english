@@ -2440,7 +2440,7 @@ function renderGrammar(){
   const badge=t['tense-label-'+td.tense]||td.tense;
   const dotClass=td.tense==='present'?'present':(td.tense==='past'?'past':'future');
   return '<div class="grammar-card grammar-card-'+td.tense+'"><div class="grammar-card-header"><div class="grammar-card-title">'+td.icon+' '+name+'</div><span class="grammar-card-badge"><span class="grammar-legend-dot '+dotClass+'"></span> '+badge+'</span></div><div class="grammar-card-formula">'+formula+'</div><div class="grammar-card-example">"'+example+'"</div><div class="grammar-card-use"><strong>'+((t['grammar-use']||'Use')+':')+'</strong> '+useText+'</div></div>';
- }).join(");
+ }).join('');
  // Render mistake cards
  const mgrid=document.getElementById('mistakesGrid');if(!mgrid)return;
  mgrid.innerHTML=mistakeData.map(function(m){
