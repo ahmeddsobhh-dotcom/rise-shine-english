@@ -2447,7 +2447,7 @@ function renderGrammar(){
   const w=t['mistake-'+mistakeData.indexOf(m)+'-wrong']||m.wrong;
   const r=t['mistake-'+mistakeData.indexOf(m)+'-right']||m.right;
   const e=t['mistake-'+mistakeData.indexOf(m)+'-explain']||m.explain;
-  return '<div class="grammar-mistake"><div class="grammar-mistake-wrong">✗ '+w+'</div><div class="grammar-mistake-right">✓ '+r+'</div><div class="grammar-mistake-explain">💡 '+e+'</div></div>';
+  return <div class="grammar-mistake"><div class="grammar-mistake-wrong">✗ ${w}</div><div class="grammar-mistake-right">✓ ${r}</div><div class="grammar-mistake-explain">💡 ${e}</div></div>;
  }).join('');
 } // Update tab button text
  const tabs2=document.querySelectorAll('.grammar-tab');
