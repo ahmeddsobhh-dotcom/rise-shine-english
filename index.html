@@ -2440,7 +2440,7 @@ function renderGrammar(){
   const badge=t['tense-label-'+td.tense]||td.tense;
   const dotClass=td.tense==='present'?'present':(td.tense==='past'?'past':'future');
   return '<div class="grammar-card grammar-card-'+td.tense+'"><div class="grammar-card-header"><div class="grammar-card-title">'+td.icon+' '+name+'</div><span class="grammar-card-badge"><span class="grammar-legend-dot '+dotClass+'"></span> '+badge+'</span></div><div class="grammar-card-formula">'+formula+'</div><div class="grammar-card-example">"'+example+'"</div><div class="grammar-card-use"><strong>'+((t['grammar-use']||'Use')+':')+'</strong> '+useText+'</div></div>';
- }).join('');
+ }).join(");
  // Render mistake cards
  const mgrid=document.getElementById('mistakesGrid');if(!mgrid)return;
  mgrid.innerHTML=mistakeData.map(function(m){
@@ -2448,7 +2448,7 @@ function renderGrammar(){
   const r=t['mistake-'+mistakeData.indexOf(m)+'-right']||m.right;
   const e=t['mistake-'+mistakeData.indexOf(m)+'-explain']||m.explain;
   return '<div class="grammar-mistake"><div class="grammar-mistake-wrong">✗ '+w+'</div><div class="grammar-mistake-right">✓ '+r+'</div><div class="grammar-mistake-explain">💡 '+e+'</div></div>';
- }).join('');
+ }).join(");
 } // Update tab button text
  const tabs2=document.querySelectorAll('.grammar-tab');
  if(tabs2.length>=2){tabs2[0].innerHTML='📚 '+(t['grammar-tab-tenses']||'Tenses');tabs2[1].innerHTML='⚠️ '+(t['grammar-tab-mistakes']||'Common Mistakes')
