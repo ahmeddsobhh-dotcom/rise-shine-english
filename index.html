@@ -2452,7 +2452,7 @@ function renderGrammar(){
 } // Update tab button text
  const tabs2=document.querySelectorAll('.grammar-tab');
  if(tabs2.length>=2){tabs2[0].innerHTML='📚 '+(t['grammar-tab-tenses']||'Tenses');tabs2[1].innerHTML='⚠️ '+(t['grammar-tab-mistakes']||'Common Mistakes')
-function initGrammar()
+function initGrammar(){
  renderGrammar();
  const tabs=document.querySelectorAll('.grammar-tab');
  tabs.forEach(function(tab){tab.addEventListener('click',function(){
